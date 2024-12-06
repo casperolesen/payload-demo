@@ -19,6 +19,13 @@ export default buildConfig({
     importMap: {
       baseDir: path.resolve(dirname),
     },
+    components: {
+      beforeLogin: undefined,
+      afterLogin: [{ path: '/components/LoginButton' }],
+      logout: {
+        Button: { path: '/components/LogoutButton' },
+      },
+    },
   },
   collections: [Users, Media],
   editor: lexicalEditor(),
